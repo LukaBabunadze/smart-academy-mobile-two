@@ -1,5 +1,5 @@
 import { Image } from "expo-image";
-import { FlatList, StyleSheet, Text, View, Button } from "react-native";
+import { Button, FlatList, StyleSheet, Text, View } from "react-native";
 
 const products = [
   {
@@ -80,12 +80,13 @@ export default function Index() {
         <View style={styles.itemWrapper}>
           <Image
             source={item.image}
+            // source={require('@/assets/images/icon.png')}
             style={styles.image}
             contentFit="contain"
           />
           <Text style={styles.title}>{item.title}</Text>
           <Text style={styles.desc}>{item.description}</Text>
-          <Button title="details" onPress={() => {}}/>
+          <Button title="details" onPress={() => {}} />
         </View>
       )}
     />

@@ -1,5 +1,7 @@
 import AntDesign from "@expo/vector-icons/AntDesign";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import { Tabs } from "expo-router";
+import { View, Text } from "react-native";
 
 const _layout = () => {
   return (
@@ -23,7 +25,7 @@ const _layout = () => {
       <Tabs.Screen
         name="cart"
         options={{
-          headerTitle: "My Cart",
+          headerTitle: " ",
           tabBarLabel: "cart",
           tabBarIcon: ({ color, focused }) => (
             <AntDesign
@@ -32,6 +34,22 @@ const _layout = () => {
               color={color}
             />
           ),
+          headerRight: () => (
+            <View style={{marginRight: 16}}>
+              <FontAwesome5 name="bell" size={20} color="black" />
+            </View>
+          ),
+          headerLeft: () => (
+            <View style={{marginLeft: 16,}}>
+              <Text style={{
+                fontSize: 18,
+                fontWeight: 500,
+              }}>PharmaMate</Text>
+            </View>
+          ),
+          headerStyle: {
+            backgroundColor: '#d7f0f5'
+          }
         }}
       />
       <Tabs.Screen
